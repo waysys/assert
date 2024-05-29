@@ -19,7 +19,6 @@ func Precondition(err error) {
 	if err != nil {
 		panic(err.Error())
 	}
-	return
 }
 
 // Postcondition return with no value if its first argument is nil.  Otherwise, it
@@ -30,7 +29,6 @@ func Postcondition(err error) {
 	if err != nil {
 		panic(err.Error())
 	}
-	return
 }
 
 // Invariant returns with no value if its argument is nil.  Otherwise, it panics.
@@ -38,7 +36,6 @@ func Invariant(value bool) {
 	if !value {
 		panic("Invariant is false")
 	}
-	return
 }
 
 // Assert returns with no value if its first argument is true.  Otherwise, it panics.
@@ -46,5 +43,4 @@ func Assert(value bool, message string) {
 	if !value {
 		panic(message)
 	}
-	return
 }
